@@ -1,0 +1,28 @@
+{
+    "query": {
+        "bool": {
+        "must": [],
+        "filter": [
+            {
+                "range": {
+                    "@timestamp": {
+                    "gte": "",
+                    "lte": "",
+                    "format": "date_hour_minute_second_millis"
+                    }
+                }
+            },
+            {
+            "match_phrase": {
+                "log_processed.message": ""
+            }
+            },
+            {
+            "match_phrase": {
+                "log_processed.message": "The # of active jobs has reached its limit"
+            }
+            }
+        ]
+        }
+    }
+    }
