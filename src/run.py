@@ -24,9 +24,9 @@ try:
             left join account_service_sync.lco_entities le on j.entity_id = le.entity_id
             left join account_service_sync.lco_users u on u.user_id = j.user_id
             where j.error_message ilike CONCAT('%',CONCAT('stale','%'))
-            and date(last_updated_ts) > now()::date - 30
+            and date(last_updated_ts) > now()::date - 7
             order by last_updated_ts desc
-            limit 5'''
+            limit 50'''
     response = pcur.execute(query)
     
     list_of_opensearch_objects = []
