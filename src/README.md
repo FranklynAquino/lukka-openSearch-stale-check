@@ -1,0 +1,1 @@
+# lukke-openSearch-stale-check
