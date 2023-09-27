@@ -19,7 +19,7 @@
             },
             {
             "match_phrase": {
-                "log_processed.message": "The # of active jobs has reached its limit"
+                "log_processed.message": "active jobs"
             }
             }
         ]
